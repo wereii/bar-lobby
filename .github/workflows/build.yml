@@ -1,14 +1,12 @@
 name: Build
 
 on:
-  push:
-    tags:
-      - "*"
-  workflow_dispatch:
+  push: {}
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+    environment: build-env
     strategy:
       fail-fast: false
       matrix:
